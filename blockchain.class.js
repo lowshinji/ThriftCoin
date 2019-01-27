@@ -1,13 +1,4 @@
 const crypto = require('crypto');
-const {
-  Stitch,
-  RemoteMongoClient,
-  AnonymousCredential
-} = require('mongodb-stitch-browser-sdk');
-
-const client = Stitch.initializeDefaultAppClient('thriftcoin-ciyus');
-
-const db = client.getServiceClient(RemoteMongoClient.factory, 'mongodb-atlas').db('ThriftCoin');
 
 class Blockchain {
   constructor(chain = []) {
@@ -16,7 +7,6 @@ class Blockchain {
   }
 
   createBlock(proof, previousHash = undefined, sender = undefined, receiver = undefined, amount = undefined) {
-    this.validateTransaction(sender, receiver, amount);
     const block = {
       index: this.chain.length + 1,
       timestamp: new Date().getTime(),
