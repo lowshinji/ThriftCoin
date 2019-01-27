@@ -9,5 +9,5 @@ node app.js
 ```
 
 The back-end application can then be interacted with at localhost:3000.
-By typing in localhost:3000/mine?sender=<name-of-sender>&receiver=<name-of-receiver>&amount=<amount-to-send>, a proof of work block will mined and the main blockchain will be updated.
+By typing in localhost:3000/mine?sender=(name-of-sender)&receiver=(name-of-receiver)&amount=(amount-to-send), a proof of work block will mined and the main blockchain will be updated.
 By simply visiting, localhost:3000, the current blockchain can be seen.
